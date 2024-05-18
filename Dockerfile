@@ -6,7 +6,12 @@ FROM ghcr.io/cirruslabs/android-sdk:${android_sdk_ver}
 ARG flutter_ver=3.22.0
 ARG build_rev=0
 
-
+# Install all versions of Android SDK due to flutter plugin dependency
+RUN yes | sdkmanager \
+   "emulator" \
+   "platforms;android-33" \
+   "build-tools;30.0.3"
+   
 # Install Flutter
 ENV FLUTTER_HOME=/usr/local/flutter \
     FLUTTER_VERSION=${flutter_ver} \
