@@ -10,7 +10,8 @@ ARG build_rev=0
 RUN yes | sdkmanager \
    "emulator" \
    "platforms;android-33" \
-   "build-tools;30.0.3"
+   "build-tools;30.0.3" \
+   "build-tools;33.0.2"
    
 # Install Flutter
 ENV FLUTTER_HOME=/usr/local/flutter \
