@@ -10,6 +10,11 @@ ARG build_rev=0
 RUN yes | sdkmanager \
    "emulator" \
    "platforms;android-33" \
+   "platforms;android-32" \
+   "platforms;android-31" \
+   "platforms;android-30" \
+   "platforms;android-29" \
+   "platforms;android-28" \
    "build-tools;30.0.3" \
    "build-tools;33.0.2"
    
